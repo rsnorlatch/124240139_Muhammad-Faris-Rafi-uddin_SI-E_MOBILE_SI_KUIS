@@ -78,6 +78,7 @@ class _StationeryDetailPageState extends State<StationeryDetailPage> {
                     "Rp. ${item.price} / pcs",
                     style: TextStyle(color: Colors.green, fontSize: 12),
                   ),
+                  Text("stock"),
                   TextField(
                     keyboardType: TextInputType.number,
                     controller: _quantityController,
@@ -94,7 +95,7 @@ class _StationeryDetailPageState extends State<StationeryDetailPage> {
                     decoration: InputDecoration(
                       icon: Icon(Icons.list),
                       iconColor: Colors.grey,
-                      hint: Text("stock"),
+                      hint: Text(item.stock.toString()),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
@@ -103,12 +104,13 @@ class _StationeryDetailPageState extends State<StationeryDetailPage> {
                       ),
                     ),
                   ),
+                  Text("description"),
                   TextField(
                     controller: _descriptionController,
                     decoration: InputDecoration(
                       icon: Icon(Icons.receipt),
                       iconColor: Colors.grey,
-                      hint: Text("descripion"),
+                      hint: Text(item.description),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
@@ -118,6 +120,7 @@ class _StationeryDetailPageState extends State<StationeryDetailPage> {
                     ),
                   ),
 
+                  Text("price"),
                   TextField(
                     keyboardType: TextInputType.number,
                     controller: _priceController,
@@ -125,7 +128,7 @@ class _StationeryDetailPageState extends State<StationeryDetailPage> {
                     decoration: InputDecoration(
                       icon: Icon(Icons.money),
                       iconColor: Colors.grey,
-                      hint: Text("price"),
+                      hint: Text(item.price.toString()),
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
